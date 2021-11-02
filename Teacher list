@@ -1,0 +1,49 @@
+using System;
+
+using System.IO;
+
+using System.Linq;
+
+using System.Collections.Generic;
+
+using cod;
+
+namespace cod
+
+{
+
+    public class Teacher_list 
+
+    {
+
+        private List<Teacher>  list_taec = new List<Teacher>();
+
+       
+
+        
+
+		public  Teacher Get_teacher_list(short n){			var teacher = list_taec[n];
+
+          return teacher;
+
+		}
+
+		
+
+		public Teacher   List_taec
+
+         {
+
+             set {list_taec.Add(value);}
+
+           //  get { return height_cen; }
+
+         }
+
+        
+
+        
+
+    }
+
+}
