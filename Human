@@ -1,0 +1,119 @@
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using cod;
+
+namespace cod
+
+{
+
+   public class Human
+
+    {
+
+        protected short age=0;
+
+        protected short height_cen = 10;
+
+        protected string name = "nameless";
+
+        protected string surname = "surnameless";
+
+       protected class Address {
+
+        public string street = "space";
+
+       	public short number = 0;       
+
+       }
+
+        protected Address address=new Address();
+
+        public Human(){}
+
+        public Human(short age, short height_cen, short number ,string name, string surname,string street)
+
+        {
+
+        	address.number = number;
+
+            address.street = street;
+
+        	this.age = age;
+
+            this.surname = surname;
+
+            this.height_cen = height_cen;
+
+            this.name = name;
+
+        }
+
+        string Surname
+
+        {
+
+            set { surname = value; }
+
+            get { return surname; }
+
+        }
+
+        short Age
+
+        {
+
+            set { age = value; }
+
+            get { return age; }
+
+        }
+
+        short Height_cen
+
+        {
+
+            set { height_cen = value; }
+
+            get { return height_cen; }
+
+        }
+
+        string Name
+
+        {
+
+            set { name = value; }
+
+            get { return name; }
+
+        }
+
+        short Number
+
+        {
+
+            set { address. number= value; }
+
+            get { return address.number; }
+
+        }
+
+        string Street
+
+        {
+
+            set { address.street = value; }
+
+            get { return address.street; }
+
+        }
+
+    }
+
+}
