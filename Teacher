@@ -1,0 +1,98 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+using cod;
+namespace cod
+{
+
+    public class Teacher : Human
+    {
+    private string faculty = "";
+    private short course_students_max = 0;
+    private Student[] course_students=new Student[0];
+   
+
+         public Teacher(){}
+         public Teacher(short age, short height_cen,short number ,short course_students_max,  string
+         name,string faculty,string street)
+        {
+        	address.number = number;
+            address.street = street;
+            this. course_students_max=course_students_max;
+ 
+            this.age = age;
+            this.height_cen = height_cen;
+            
+            this.name = name;
+            this.faculty = faculty;
+        }
+         public void	Get_Course_students(){ 
+         	for(short i=0;i<course_students.Length;i++){ 
+         	  Console.WriteLine(course_students[i].Name );
+         	 Console.WriteLine( course_students[i].Surname);
+         	  
+         	  
+         	 }
+         	
+         	}
+        
+        
+        
+         public Student Course_students{
+         	
+         	set { 
+         		if(course_students.Length!=course_students_max){
+         		Student []kistul=new Student[course_students.Length+1];
+         		for(short i=0;i<course_students.Length;i++){
+         			
+         			kistul[i]=course_students[i];
+         			
+         			
+         		}
+         		
+         		kistul[course_students.Length]=value;
+              course_students=kistul;
+         	
+         	}
+         
+         	
+         }
+         }
+        public short Age
+         {
+             set {age = value;}
+             get{return age;}
+         }
+        public  short hHeight_cen
+         {
+             set { height_cen = value; }
+             get { return height_cen; }
+         }
+       public  short Number
+        {
+            set { address. number= value; }
+            get { return address.number; }
+        }
+     public short Course_students_max
+        {
+            set { course_students_max= value; }
+            get { return course_students_max; }
+        }
+        
+        public string Name
+         {
+             set { name = value; }
+             get { return name; }
+         }
+        public string Faculty
+         {  set { faculty = value; }get { return faculty; }}
+         
+        
+       public string Street
+        {
+            set { address.street = value; }
+            get { return address.street; }
+        }
+    }
+}
